@@ -1,0 +1,29 @@
+.book {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.about-btn {
+  color: #fff;
+  margin-top: 30px;
+  position: absolute;
+  font-size: 30px;
+  margin-left: 200px;
+}
+
+.student_field {
+  display: flex;
+  flex-direction: row;
+}
+
+.col-md-4 {
+  padding-right: 10px;
+}
+
+.student {
+  margin-bottom: 20px;
+}
+.students {
+  position: absolute;
+  bottom: 50px;
+}
