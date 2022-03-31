@@ -40,6 +40,46 @@ export class BooksService {
       },
       ratingStar: 5,
     },
+    {
+      id: '4',
+      volumeInfo: {
+        title: 'Capra cu trei iezi',
+        author: 'Ion Creanga',
+        publisher: 'Humanitas',
+        publisherDate: '2019-01-27',
+      },
+      ratingStar: 5,
+    },
+    {
+      id: '4',
+      volumeInfo: {
+        title: 'Capra cu trei iezi',
+        author: 'Ion Creanga',
+        publisher: 'Humanitas',
+        publisherDate: '2019-01-27',
+      },
+      ratingStar: 5,
+    },
+    {
+      id: '4',
+      volumeInfo: {
+        title: 'Capra cu trei iezi',
+        author: 'Ion Creanga',
+        publisher: 'Humanitas',
+        publisherDate: '2019-01-27',
+      },
+      ratingStar: 5,
+    },
+    {
+      id: '4',
+      volumeInfo: {
+        title: 'Capra cu trei iezi',
+        author: 'Ion Creanga',
+        publisher: 'Humanitas',
+        publisherDate: '2019-01-27',
+      },
+      ratingStar: 5,
+    },
   ];
 
   private _booksSubject = new BehaviorSubject<IBook[]>(this.books);

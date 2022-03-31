@@ -1,13 +1,26 @@
 .main-body {
-  margin-top: 5%;
-  display: flex;
-  justify-content: space-evenly;
+  display: flex; 
+  justify-content: space-between;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+
+  // max-width:33vw;
+  // grid-template-columns: 1fr 1fr 1fr;
+  // gap:30px;
 }
 
 .book-item {
-  margin-bottom: 20%;
+  // flex: 1 0 21%;
+  min-width: 25rem;
 }
 
+// .child {
+//   flex-basis: 33.33333%;
+// }
+
+.book-detail {
+  margin-top: 2%;
+}
 .logout {
-  margin-left:1300px;
+  margin-left: 1300px;
 }

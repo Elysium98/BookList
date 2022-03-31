@@ -2,7 +2,9 @@
 <div class="book-item" *ngIf="bookToShow">
   <div class="row">
     <div class="col-md-4">{{ 'BOOK_DETAIL_AUTHOR' | translate }}:</div>
-    <div class="col-md-8">{{ bookToShow.volumeInfo.author | translate }}</div>
+    <div class="col-md-8">
+      {{ bookToShow.volumeInfo.author | translate }}
+    </div>
   </div>
   <div class="row">
     <div class="col-md-4">{{ 'BOOK_DETAIL_PUBLISHER' | translate }}:</div>
@@ -21,17 +23,17 @@
         formControlName="date"
       />
     </mat-form-field>
-    <app-star
-      [rating]="bookToShow.ratingStar"
-      (ratingUpdated)="onRatingUpdated($event)"
-    ></app-star>
+
     <!-- <button (click)="saveRating(bookToShow)" data-test="add-button">
       Save Rating
     </button> -->
-    <button type="submit" data-test="add-button">Save</button>
+    <button type="submit" class="add-button" data-test="add-button">
+      Save
+    </button>
   </form>
-</div>
 
-<app-about>
-  <p>projected content</p>
-</app-about>
+  <app-star
+    [rating]="bookToShow.ratingStar"
+    (ratingUpdated)="onRatingUpdated($event)"
+  ></app-star>
+</div>

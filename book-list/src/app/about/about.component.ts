@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { IStudent } from '../models/student.model';
+import { StudentService } from '../services/student.service';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss']
+  styleUrls: ['./about.component.scss'],
 })
 export class AboutComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+  students: IStudent[];
+  constructor(private studentService: StudentService) {
+    this.students = studentService.students;
   }
 
+  ngOnInit() {}
 }

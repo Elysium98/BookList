@@ -34,7 +34,6 @@ export class AppComponent {
   errorMessage: any;
   books: IBook[] = [];
   users: any = [];
-  students: IStudent[];
 
   onAdd(bookId: string) {
     this.store.dispatch(addBook({ bookId }));
@@ -51,18 +50,14 @@ export class AppComponent {
   constructor(
     private booksService: BooksService,
     private userService: UserService,
-    private studentService: StudentService,
     private store: Store,
     public translate: TranslateService
   ) {
-    this.students = studentService.students;
-
-    console.log(studentService.students);
     console.log('inside app component');
     translate.addLangs(['en', 'fr']);
     // this language will be used as a fallback when a translation isn't found in the current language
     translate.setDefaultLang('en');
-    
+
     // the lang to use, if the lang isn't available, it will use the current loader to get them
     translate.use('en');
     const browserLang = translate.getBrowserLang();
