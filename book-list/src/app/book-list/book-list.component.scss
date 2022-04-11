@@ -1,22 +1,13 @@
 .main-body {
-  display: flex; 
+  display: flex;
   justify-content: space-between;
   overflow-x: auto;
   flex-wrap: nowrap;
-
-  // max-width:33vw;
-  // grid-template-columns: 1fr 1fr 1fr;
-  // gap:30px;
 }
 
 .book-item {
-  // flex: 1 0 21%;
   min-width: 25rem;
 }
-
-// .child {
-//   flex-basis: 33.33333%;
-// }
 
 .book-detail {
   margin-top: 2%;

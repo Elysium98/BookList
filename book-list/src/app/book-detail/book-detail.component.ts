@@ -26,7 +26,7 @@ export class BookDetailComponent implements OnInit {
     console.log(this.bookToShow);
     this.dataFormGroup = this.fb.group({
       date: this.bookToShow.volumeInfo.publisherDate,
-      rating: [null]
+      rating: [null],
     });
   }
 
@@ -34,6 +34,7 @@ export class BookDetailComponent implements OnInit {
     console.log('Before ' + this.bookToShow.volumeInfo.publisherDate);
     this.bookToShow.volumeInfo.publisherDate = this.dataFormGroup.value.date;
     this.bookToShow.ratingStar = this.updatedRating;
+
     this.updatedBook.emit(bookToShow);
 
     console.log('After ' + this.dataFormGroup.value.date);

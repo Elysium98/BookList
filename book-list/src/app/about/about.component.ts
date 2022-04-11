@@ -7,11 +7,9 @@ import { StudentService } from '../services/student.service';
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss'],
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent {
   students: IStudent[];
   constructor(private studentService: StudentService) {
     this.students = studentService.students;
   }
-
-  ngOnInit() {}
 }

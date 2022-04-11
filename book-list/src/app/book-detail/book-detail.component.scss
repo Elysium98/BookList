@@ -1,11 +1,14 @@
 .book-item {
   margin-top: 3%;
   display: grid;
-  gap: 40px;
-  grid-template-rows: 0.4fr 0.4fr 0.4fr;
+  gap: 20px;
+  // grid-template-rows: 0.4fr 0.4fr 0.4fr;
   text-align: center;
+  grid-template-columns: 20% 20%;
 }
-
+.title-detail{
+  margin-left: 20%;
+}
 .col-md-4,
 .col-md-8 {
   display: inline;
@@ -14,7 +17,7 @@
 .add-button {
   position: relative;
   top: 230%;
-  right: 9%;
+  left:30%;
 }
 
 ::ng-deep .mat-form-field-infix {

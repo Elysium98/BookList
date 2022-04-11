@@ -5,7 +5,9 @@ export interface IBook {
     author: string;
     publisher: string;
     publisherDate: string;
-  },
+    language: string;
+    volume: number;
+    pageNumber: number;
+  };
   ratingStar: number;
 }
-

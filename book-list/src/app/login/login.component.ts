@@ -13,7 +13,7 @@ import { UserService } from '../services/user.service';
 })
 export class LoginComponent implements OnInit {
   loginFormGroup: FormGroup;
-  users$: Observable<IUser[]>; 
+  users$: Observable<IUser[]>;
 
   constructor(
     private fb: FormBuilder,
@@ -38,8 +38,8 @@ export class LoginComponent implements OnInit {
       });
       console.log('User at login', typeof user);
       this.userService.setCurrentUser(user);
-      if (user) {     
-        sessionStorage.setItem('user', JSON.stringify(user));     
+      if (user) {
+        sessionStorage.setItem('user', JSON.stringify(user));
 
         this.router.navigate(['/bookList']);
         this.loginFormGroup.reset();

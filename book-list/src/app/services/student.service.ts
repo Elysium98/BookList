@@ -10,7 +10,6 @@ import { IStudent } from '../models/student.model';
 
 @Injectable({ providedIn: 'root' })
 export class StudentService {
-  
   private studentsUrl = 'api/students/students.json';
   students: IStudent[];
 

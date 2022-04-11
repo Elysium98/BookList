@@ -19,10 +19,7 @@ export class SignupComponent implements OnInit {
     private router: Router,
     private userService: UserService,
     private http: HttpClient
-  ) {
-    // sessionStorage.setItem('isLoggedIn', 'False');
-    // sessionStorage.setItem('user', null);
-  }
+  ) {}
 
   ngOnInit() {
     this.signupFormGroup = this.fb.group({

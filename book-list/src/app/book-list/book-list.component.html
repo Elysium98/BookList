@@ -11,15 +11,13 @@
 <div>
   <div class="main-body">
     <div class="book-item" *ngFor="let book of books$ | async; let i = index">
+      <p>{{ book.volumeInfo.title | translate }}</p>
 
-        <p>{{ book.volumeInfo.title | translate }}</p>
+      <button (click)="getBook(book.id)" data-test="add-button">
+        {{ 'DETAIL_BUTTON' | translate }}
+      </button>
 
-        <button (click)="getBook(book.id)" data-test="add-button">
-          {{ 'DETAIL_BUTTON' | translate }}
-        </button>
-
-        <app-star [readOnly]="true" [rating]="book.ratingStar"></app-star>
-  
+      <app-star [readOnly]="true" [rating]="book.ratingStar"></app-star>
     </div>
   </div>
   <div class="book-detail" *ngIf="book$ | async">

@@ -36,12 +36,6 @@ export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
-// export function basicLoader(): Promise<any> {
-//   return new Promise((resolve) => {
-//     resolve(console.log('basic loader'));
-//   });
-// }
-
 export function initializeApp(userService: UserService) {
   return (): Promise<any> => {
     return userService.initializeUser();

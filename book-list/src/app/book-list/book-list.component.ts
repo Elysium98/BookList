@@ -26,8 +26,7 @@ export class BookListComponent implements OnInit {
     private booksService: BooksService,
     private userService: UserService,
     public dialog: MatDialog
-  ) {
-  }
+  ) {}
 
   ngOnInit(): void {
     this.getBooks();
@@ -35,8 +34,8 @@ export class BookListComponent implements OnInit {
 
   getBook(id: string): void {
     this.book$ = this.booksService.getBookById$(id);
-    this.book$.subscribe( data => this.testBook = data)
-    console.log(this.testBook)
+    this.book$.subscribe((data) => (this.testBook = data));
+    console.log(this.testBook);
   }
 
   openDialog(): void {

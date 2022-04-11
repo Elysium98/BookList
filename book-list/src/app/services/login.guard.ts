@@ -27,7 +27,7 @@ export class LoginGuard implements CanActivate {
   constructor(private userService: UserService, private router: Router) {}
 
   checkLoggedIn(): boolean {
-    if (sessionStorage.getItem('user') === null ) {
+    if (sessionStorage.getItem('user') === null) {
       return true;
     } else {
       this.router.navigate(['/bookList']);
